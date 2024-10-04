@@ -1,0 +1,13 @@
+services:
+  gym_app_solid:
+    image: postgres
+    container_name: gym_app_solid
+    ports:
+      - 5432:5432
+    restart: always
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=
+    volumes:
+      - ./data:/var/lib/postgresql/data
